@@ -1,5 +1,5 @@
 module.exports = {
-  input: "lib/index.js",
+  input: "src/index.js",
   output: {
     dir: "build",
     // format: ["cjs", "esm"],

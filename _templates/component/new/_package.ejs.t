@@ -1,15 +1,20 @@
+---
+to: packages/<%= reactFolderName %>/package.json
+---
+
 {
-  "name": "button",
+  "name": "<%= reactFolderName %>",
   "version": "0.0.0",
-  "description": "button",
+  "description": "<%= reactFolderName %>",
   "keywords": [
-    "button"
+    "<%= reactFolderName %>"
   ],
   "license": "MIT",
   "main": "build/index.esm.js",
   "source": "src/index.js",
   "files": [
-    "build"
+    "build",
+    "src"
   ],
   "publishConfig": {
     "access": "public"
@@ -19,8 +24,5 @@
     "prebuild": "rm -rf build",
     "build": "bili --config ../../bili.config.js",
     "watch": "bili --watch --config ../../bili.config.js"
-  },
-  "dependencies": {
-    "close-icon": "^0.0.0"
   }
 }
