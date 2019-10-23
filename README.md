@@ -14,6 +14,7 @@
 > - conventional commits and changelogs
 > - css reset
 > - bili.js vs microbundle
+> - Object.assign used in builds. Do I need to Polyfill? Or will app bundler? IE11 support?
 
 # Learning Lerna
 
