@@ -1,5 +1,5 @@
 ---
-to: packages/<%= reactFolderName %>/lib/<%= reactComponentName %>.stories.js
+to: packages/<%= reactFolderName %>/src/<%= reactComponentName %>.stories.js
 ---
 
 import React from "react";

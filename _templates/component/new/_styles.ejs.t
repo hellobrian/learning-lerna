@@ -1,5 +1,5 @@
 ---
-to: packages/<%= reactFolderName %>/lib/<%= reactComponentName %>.module.scss
+to: packages/<%= reactFolderName %>/src/<%= reactComponentName %>.module.scss
 sh: "lerna run build --scope=<%= reactFolderName %>"
 ---
 .root {

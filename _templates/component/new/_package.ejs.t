@@ -11,14 +11,13 @@ to: packages/<%= reactFolderName %>/package.json
   ],
   "license": "MIT",
   "main": "build/index.esm.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "source": "src/index.js",
   "files": [
-    "lib"
+    "build",
+    "src"
   ],
   "publishConfig": {
-    "registry": "https://nexus.corp.indeed.com/repository/npm"
+    "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",

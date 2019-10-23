@@ -1,5 +1,5 @@
 ---
-to: packages/<%= reactFolderName %>/lib/<%= reactComponentName %>.js
+to: packages/<%= reactFolderName %>/src/<%= reactComponentName %>.js
 ---
 "use strict";
 

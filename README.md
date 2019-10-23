@@ -65,11 +65,11 @@ You'll be prompted to enter a component name and `hygen` will scaffold your new 
 ✔ React component name: · MyNewComponent
 
 Loaded templates: _templates
-       added: packages/my-new-component/lib/MyNewComponent.js
-       added: packages/my-new-component/lib/index.js
+       added: packages/my-new-component/src/MyNewComponent.js
+       added: packages/my-new-component/src/index.js
        added: packages/my-new-component/package.json
-       added: packages/my-new-component/lib/MyNewComponent.stories.js
-       added: packages/my-new-component/lib/MyNewComponent.module.scss
+       added: packages/my-new-component/src/MyNewComponent.stories.js
+       added: packages/my-new-component/src/MyNewComponent.module.scss
        shell: lerna run build --scope=my-new-component
 ```
 
@@ -79,7 +79,7 @@ Your component folder should look like this:
 packages/my-new-component
 ├── build
 │   └── index.esm.js
-├── lib
+├── src
 │   ├── MyNewComponent.js
 │   ├── MyNewComponent.module.scss
 │   ├── MyNewComponent.stories.js
@@ -103,7 +103,7 @@ Also note:
 All develpment is done through storybook.
 The trick here is that each `*.stories.js` file will import `build/index.esm.js`.
 
-From the root directory, we can run `npm run dev` script and storybook will update and rebuild the packages while you make changes to `lib/index.js`.
+From the root directory, we can run `npm run dev` script and storybook will update and rebuild the packages while you make changes to files in `src`.
 
 <!-- ## Tutorial: Starting your own monorepo with lerna
 
@@ -147,7 +147,7 @@ packages
     ├── README.md
     ├── __tests__
     │   └── button.test.js
-    ├── lib
+    ├── src
     │   └── button.js
     └── package.json
 ```
