@@ -6,13 +6,13 @@ Using this repo to learn lerna for managing a component library as a monorepo.
 
 ## Usage
 
-Follow this usage section to grab this repo and start using it for your own component library monorepo.
+> Feel free to grab this repo to start your own component monorepo library.
 
 ```sh
 # setup
 git clone git@github.com:hellobrian/learning-lerna.git
 cd learning-lerna
-nvm install && nvm use 
+nvm install && nvm use
 npm i
 
 # bootstrap the project
@@ -23,42 +23,59 @@ npm run dev
 
 # create a new package
 # example: npx lerna create button
-npx lerna create <package>
+npx run create
 ```
 
 ### Creating new packages
 
-We want each component to be its own package.
-Components are built with: 
-
-- React
-- CSS Modules
-- SCSS
-
-Components are built out to ESM, but CJS and UMD is possible.
-Builds are done via bili.js, which is pre-configured rollup. 
-
-Create a new package using lerna:
+> One component per package
 
 ```sh
-# example: npx lerna create button
-npx lerna create <package>
+# Create new package
+npm run create
 ```
 
-Once it's done, edit the files to match this file structure:
+You'll be prompted to enter a component name and `hygen` will scaffold your new component.
+
+```sh
+> learning-lerna@1.0.0 create /Users/brhan/dev/learning-lerna
+> hygen component new
+
+✔ React component name: · MyNewComponent
+
+Loaded templates: _templates
+       added: packages/my-new-component/lib/MyNewComponent.js
+       added: packages/my-new-component/lib/index.js
+       added: packages/my-new-component/package.json
+       added: packages/my-new-component/lib/MyNewComponent.stories.js
+       added: packages/my-new-component/lib/MyNewComponent.module.scss
+       shell: lerna run build --scope=my-new-component
 ```
-packages/button
-├── README.md
-├── __tests__
-│   └── button.test.js
+
+Your component folder should look like this:
+
+```
+packages/my-new-component
 ├── build
 │   └── index.esm.js
 ├── lib
-│   ├── index.js
-│   ├── index.module.scss
-│   └── index.stories.js
+│   ├── MyNewComponent.js
+│   ├── MyNewComponent.module.scss
+│   ├── MyNewComponent.stories.js
+│   └── index.js
 └── package.json
 ```
+
+Components are built with:
+
+- React (`*.js`)
+- CSS Modules (`*.scss`)
+- Storybook (`*.stories.js`)
+
+Also note:
+
+- Components are built out to ESM only. (CJS and UMD later if needed).
+- Builds are done via bili.js, which is pre-configured rollup.
 
 ### Development
 
@@ -67,8 +84,7 @@ The trick here is that each `*.stories.js` file will import `build/index.esm.js`
 
 From the root directory, we can run `npm run dev` script and storybook will update and rebuild the packages while you make changes to `lib/index.js`.
 
-
-## Tutorial: Starting your own monorepo with lerna
+<!-- ## Tutorial: Starting your own monorepo with lerna
 
 ```sh
 # setup a new project
@@ -122,4 +138,4 @@ npm i react react-dom parcel-bundler -D
 
 ## Resources
 
-- https://areknawo.com/full-blown-monorepo-setup-walkthrough/
+- https://areknawo.com/full-blown-monorepo-setup-walkthrough/ -->
