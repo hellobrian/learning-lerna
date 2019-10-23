@@ -19,17 +19,16 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-var css = ".index-module_button__2QvEB {\n  background: red;\n  color: blue; }\n";
-var styles = {"button":"index-module_button__2QvEB"};
+var css = ".Button-module_root__3D07A {\n  outline: 1px solid red; }\n";
+var styles = {"root":"Button-module_root__3D07A"};
 styleInject(css);
 
 function Button(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("button", _extends({
-    className: styles.button
+  return React.createElement("div", _extends({
+    className: styles.root
   }, props));
 }
 
 export default Button;
-export { Button };

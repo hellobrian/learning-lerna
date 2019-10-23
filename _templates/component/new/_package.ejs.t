@@ -1,10 +1,13 @@
+---
+to: packages/<%= reactFolderName %>/package.json
+---
 
 {
-  "name": "button",
+  "name": "<%= reactFolderName %>",
   "version": "0.0.0",
-  "description": "button",
+  "description": "<%= reactFolderName %>",
   "keywords": [
-    "button"
+    "<%= reactFolderName %>"
   ],
   "license": "MIT",
   "main": "lib/index.js",
