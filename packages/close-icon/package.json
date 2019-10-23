@@ -1,13 +1,9 @@
----
-to: packages/<%= reactFolderName %>/package.json
----
-
 {
-  "name": "<%= reactFolderName %>",
+  "name": "close-icon",
   "version": "0.0.0",
-  "description": "<%= reactFolderName %>",
+  "description": "close-icon",
   "keywords": [
-    "<%= reactFolderName %>"
+    "close-icon"
   ],
   "license": "MIT",
   "main": "build/index.esm.js",
