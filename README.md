@@ -24,6 +24,12 @@ npm run dev
 # create a new package
 # example: npx lerna create button
 npx run create
+
+# Symlink together all Lerna packages that are dependencies of each other in the current Lerna repo.
+npx lerna link
+
+# install local packages (use close-icon in button)
+npx lerna add close-icon --scope=button
 ```
 
 ### Creating new packages
