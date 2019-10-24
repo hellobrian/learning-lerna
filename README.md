@@ -1,17 +1,4 @@
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-> TODO: 
->- setup jest
->- setup cypress
->- IE11 browser compat
->  - css variables
->  - async/await? (bili might already handle this)
->- import json
->- import svg
->- how to publish packages?
->  - semantic releases
->  - conventional commits and changelogs
-> -css reset? 
-
 
 > TODO:
 >
