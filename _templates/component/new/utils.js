@@ -1,7 +1,19 @@
+const { readdirSync } = require("fs");
+
 function dasherize(str) {
-  return str.replace(/[A-Z]/g, function(char, index) {
+  // replace all capital letters with lowercase letter
+  // and prepend each lowercase letter with dash
+  const lowerCaseWithDashes = str.replace(/[A-Z]/g, function(char, index) {
     return (index !== 0 ? "-" : "") + char.toLowerCase();
   });
+
+  // return single dashes between words
+  const singleDashes = lowerCaseWithDashes
+    .split("-")
+    .filter(char => char !== "")
+    .join("-");
+
+  return singleDashes;
 }
 
 function capitalize(str) {
@@ -29,10 +41,21 @@ function reactFolderName(str) {
   return dasherize(str).toLowerCase();
 }
 
+function keepLettersAndDashes(str) {
+  return str.replace(/[^a-zA-Z-]/g, "");
+}
+
+const getDirectories = source =>
+  readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
+
 module.exports = {
-  capitalize,
   camelize,
+  capitalize,
   dasherize,
+  getDirectories,
+  keepLettersAndDashes,
   reactComponentName,
   reactFolderName
 };
