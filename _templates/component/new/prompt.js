@@ -24,6 +24,15 @@ const doneMessage = value => {
   console.log(`\n${tree}\n`);
 };
 
+const nameExample = () => {
+  return `
+
+${chalk.underline("Example")}:
+
+  ${chalk.green("✔ PrimaryButton")}
+  ${chalk.green("✔ primary-button")}`;
+};
+
 module.exports = {
   prompt: ({ prompter, args }) => {
     return new Promise((resolve, reject) => {
@@ -33,6 +42,10 @@ module.exports = {
           name: "name",
           validate: function(value) {
             const length = value.length > 0;
+            const uppercase = value
+              .split("")
+              .every(char => char === char.toUpperCase());
+
             const packageExists =
               getDirectories("./packages").filter(
                 folder => folder === reactFolderName(value)
@@ -40,6 +53,10 @@ module.exports = {
 
             if (!length) {
               return "Please enter a valid name with length";
+            }
+
+            if (uppercase) {
+              return `Use CamelCase or snake-case for names ${nameExample()}`;
             }
 
             if (packageExists) {

@@ -1,7 +1,7 @@
 const { readdirSync } = require("fs");
 
 function dasherize(str) {
-  // replace all capital letters with lowercase letter
+  // replace all capital letters with lowercase letters
   // and prepend each lowercase letter with dash
   const lowerCaseWithDashes = str.replace(/[A-Z]/g, function(char, index) {
     return (index !== 0 ? "-" : "") + char.toLowerCase();
@@ -22,19 +22,25 @@ function capitalize(str) {
 }
 
 function camelize(str) {
-  return str
-    .replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-      return index == 0 ? word.toLowerCase() : word.toUpperCase();
-    })
+  const camelizedWithDashes = str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(
+    word,
+    index
+  ) {
+    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+  });
+
+  return camelizedWithDashes
+    .split("-")
+    .filter(char => char !== "-")
+    .join("")
     .replace(/\s+/g, "");
 }
 
 function reactComponentName(str) {
-  // camelize string AND remove dashes
-  const camelString = camelize(str.replace(/-/g, ""));
-
-  // return capitalized string
-  return capitalize(camelString);
+  return camelize(str)
+    .split("")
+    .map((char, index) => (index === 0 ? char.toUpperCase() : char))
+    .join("");
 }
 
 function reactFolderName(str) {

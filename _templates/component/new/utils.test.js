@@ -4,7 +4,7 @@ const {
   dasherize,
   reactComponentName,
   reactFolderName
-} = require("./stringUtils");
+} = require("./utils");
 
 describe("dasherize", () => {
   const testNames = [
@@ -16,13 +16,21 @@ describe("dasherize", () => {
     "-----mY-------aWeSoMe--------CoMpOnEnT-----"
   ];
 
-  it("should return all lowercase characters", () => {
+  xit("should return all lowercase characters", () => {
     testNames.forEach(testName => {
       const result = dasherize(testName).split("-");
-      console.log({ result });
+      console.log(dasherize(testName));
       result.forEach(char => {
         expect(char === char.toLowerCase());
       });
     });
+  });
+});
+
+describe("camelize", () => {
+  it("should camelize snake-case strings", () => {
+    const result = camelize("snake-case-string");
+    console.log({ result });
+    expect(result).toEqual("snakeCaseString");
   });
 });
