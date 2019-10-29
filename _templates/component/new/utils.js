@@ -1,6 +1,6 @@
 const { readdirSync } = require("fs");
-const dasherize = require("./dasherize");
-const camelize = require("./camelize");
+const dasherize = require("./utils/dasherize");
+const camelize = require("./utils/camelize");
 
 function capitalize(str) {
   if (typeof str !== "string") return "";

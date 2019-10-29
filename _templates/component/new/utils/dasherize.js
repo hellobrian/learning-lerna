@@ -11,7 +11,10 @@ function dasherize(str) {
     .filter(char => char !== "")
     .join("-");
 
-  return singleDashes;
+  // replace spaces with dashes
+  const handleSpaces = singleDashes.split(" ").join("-");
+
+  return handleSpaces;
 }
 
 module.exports = dasherize;
