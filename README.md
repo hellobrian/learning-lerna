@@ -2,7 +2,6 @@
 
 > TODO:
 >
-> - setup jest
 > - setup cypress
 > - IE11 browser compat
 > - css variables

@@ -1,0 +1,15 @@
+image: node:carbon
+
+pages:
+  script:
+    # - npm install
+    - npm ci
+    - npm run build
+  stage: deploy
+  artifacts:
+    paths:
+      - public
+  tags:
+    - pages
+  only:
+    - master
