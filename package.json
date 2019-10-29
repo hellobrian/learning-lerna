@@ -8,6 +8,7 @@
     "test": "jest",
     "build:storybook": "build-storybook -o public",
     "build:packages": "lerna run build",
+    "prebuild": "lerna bootstrap",
     "build": "npm run build:packages && npm run build:storybook",
     "create": "hygen component new",
     "dev:storybook": "start-storybook -p 6006 --ci --quiet",
