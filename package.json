@@ -6,9 +6,9 @@
   "scripts": {
     "test:watch": "jest --watchAll",
     "test": "jest",
-    "build:storybook": "build-storybook -s public",
+    "build:storybook": "build-storybook -o public",
     "build:packages": "lerna run build",
-    "build": "npm-run-all --parallel build:*",
+    "build": "npm run build:packages && npm run build:storybook",
     "create": "hygen component new",
     "dev:storybook": "start-storybook -p 6006 --ci --quiet",
     "dev:watch": "lerna run watch",
