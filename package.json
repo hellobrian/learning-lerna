@@ -8,6 +8,7 @@
     "test": "jest",
     "build:storybook": "build-storybook",
     "build:packages": "lerna run build",
+    "build": "npm-run-all --parallel build:*",
     "create": "hygen component new",
     "dev:storybook": "start-storybook -p 6006 --ci --quiet",
     "dev:watch": "lerna run watch",
