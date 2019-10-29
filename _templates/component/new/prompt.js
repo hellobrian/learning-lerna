@@ -1,13 +1,19 @@
+// packages
 const chalk = require("chalk");
-const {
-  reactComponentName,
-  reactFolderName,
-  keepLettersAndDashes,
-  getDirectories
-} = require("./utils");
+
+// utils
+const dasherize = require("./utils/dasherize");
+const validate = require("./utils/validate");
+
+function reactComponentName(str) {
+  return camelize(str)
+    .split("")
+    .map((char, index) => (index === 0 ? char.toUpperCase() : char))
+    .join("");
+}
 
 const doneMessage = value => {
-  const folder = chalk.green(reactFolderName(value));
+  const folder = chalk.green(dasherize(value));
   const component = chalk.green(reactComponentName(value));
   const tree = `./packages/${folder}
   ├── build
@@ -24,15 +30,6 @@ const doneMessage = value => {
   console.log(`\n${tree}\n`);
 };
 
-const nameExample = () => {
-  return `
-
-${chalk.underline("Example")}:
-
-  ${chalk.green("✔ PrimaryButton")}
-  ${chalk.green("✔ primary-button")}`;
-};
-
 module.exports = {
   prompt: ({ prompter, args }) => {
     return new Promise((resolve, reject) => {
@@ -40,41 +37,22 @@ module.exports = {
         .prompt({
           type: "input",
           name: "name",
-          validate: function(value) {
-            const length = value.length > 0;
-            const uppercase = value
-              .split("")
-              .every(char => char === char.toUpperCase());
-
-            const packageExists =
-              getDirectories("./packages").filter(
-                folder => folder === reactFolderName(value)
-              ).length > 0;
-
-            if (!length) {
-              return "Please enter a valid name with length";
-            }
-
-            if (uppercase) {
-              return `Use CamelCase or snake-case for names ${nameExample()}`;
-            }
-
-            if (packageExists) {
-              return `${value} (${reactFolderName(value)}) already exists`;
-            }
-
-            return true;
-          },
+          validate,
           message: `Name your new component:`
         })
-        .then(({ name }) => {
-          const value = keepLettersAndDashes(name);
-          doneMessage(value);
-          resolve({
-            reactComponentName: reactComponentName(value),
-            reactFolderName: reactFolderName(value)
-          });
-        });
+        .then(
+          ({ name }) => {
+            const value = dasherize(name);
+            doneMessage(value);
+            resolve({
+              reactComponentName: reactComponentName(value),
+              reactFolderName: dasherize(value)
+            });
+          },
+          reject => {
+            console.log("Goodbye!");
+          }
+        );
     });
   }
 };

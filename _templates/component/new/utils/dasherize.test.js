@@ -45,3 +45,12 @@ describe("string---with---lotsa---dashes", () => {
     expect(test).toEqual("string-with-lotsa-dashes");
   });
 });
+
+describe("$*(@#$----string-with-special-chars----(92*(*!", () => {
+  const string = "$*(@#$----string-with-special-chars----(92*(*!";
+  const test = dasherize(string);
+
+  it("should clean up string", () => {
+    expect(test).toEqual("string-with-special-chars");
+  });
+});

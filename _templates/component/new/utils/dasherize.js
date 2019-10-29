@@ -14,7 +14,14 @@ function dasherize(str) {
   // replace spaces with dashes
   const handleSpaces = singleDashes.split(" ").join("-");
 
-  return handleSpaces;
+  // remove special characters but keep dashes
+  const removeSpecialChars = handleSpaces
+    .replace(/[^a-zA-Z]/g, " ")
+    .trim()
+    .split(" ")
+    .join("-");
+
+  return removeSpecialChars;
 }
 
 module.exports = dasherize;
