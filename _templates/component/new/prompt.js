@@ -2,6 +2,7 @@
 const chalk = require("chalk");
 
 // utils
+const camelize = require("./utils/camelize");
 const dasherize = require("./utils/dasherize");
 const validate = require("./utils/validate");
 
