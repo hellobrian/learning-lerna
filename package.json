@@ -6,6 +6,7 @@
     "scripts": {
         "test:watch": "jest --watchAll",
         "test": "jest",
+        "prepush": "npm test",
         "build:storybook": "build-storybook -o public",
         "build:packages": "lerna run build",
         "prebuild": "lerna bootstrap",
