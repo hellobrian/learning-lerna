@@ -7,10 +7,9 @@ export default {
   title: "Button"
 };
 
-export const Default = () => <Button>wut up</Button>;
-export const Close = () => (
-  <Button type="button" onClick={action("onClick")}>
-    <CloseIcon style={{ fill: "orange" }} />
-    hello
+export const Default = () => (
+  <Button onClick={action("onClick")}>
+    <CloseIcon />
+    wut up
   </Button>
 );
