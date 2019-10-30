@@ -2,18 +2,18 @@
 
 > TODO:
 >
-> - setup cypress
-> - IE11 browser compat
-> - css variables
-> - async/await? (bili might already handle this)
-> - import json
-> - import svg
-> - how to publish packages?
-> - semantic releases
-> - conventional commits and changelogs
-> - css reset
-> - bili.js vs microbundle
-> - Object.assign used in builds. Do I need to Polyfill? Or will app bundler? IE11 support?
+> -   setup cypress
+> -   IE11 browser compat
+> -   css variables
+> -   async/await? (bili might already handle this)
+> -   import json
+> -   import svg
+> -   how to publish packages?
+> -   semantic releases
+> -   conventional commits and changelogs
+> -   css reset
+> -   bili.js vs microbundle
+> -   Object.assign used in builds. Do I need to Polyfill? Or will app bundler? IE11 support?
 
 # Learning Lerna
 
@@ -89,14 +89,14 @@ packages/my-new-component
 
 Components are built with:
 
-- React (`*.js`)
-- CSS Modules (`*.scss`)
-- Storybook (`*.stories.js`)
+-   React (`*.js`)
+-   CSS Modules (`*.scss`)
+-   Storybook (`*.stories.js`)
 
 Also note:
 
-- Components are built out to ESM only. (CJS and UMD later if needed).
-- Builds are done via bili.js, which is pre-configured rollup.
+-   Components are built out to ESM only. (CJS and UMD later if needed).
+-   Builds are done via bili.js, which is pre-configured rollup.
 
 ### Development
 
@@ -160,6 +160,6 @@ npm i react react-dom parcel-bundler -D
 
 ## Resources
 
-- https://areknawo.com/full-blown-monorepo-setup-walkthrough/
-- [🔴 Setup a monorepo with Lerna 🐉](https://www.youtube.com/watch?v=pU87ufl2lDc) - [chantastic](https://www.youtube.com/channel/UCXpmUxvG37qpckRHdkstf5w)
-- [Running bili/rollup --watch with lerna](https://stackoverflow.com/a/55655749/2058360)
+-   https://areknawo.com/full-blown-monorepo-setup-walkthrough/
+-   [🔴 Setup a monorepo with Lerna 🐉](https://www.youtube.com/watch?v=pU87ufl2lDc) - [chantastic](https://www.youtube.com/channel/UCXpmUxvG37qpckRHdkstf5w)
+-   [Running bili/rollup --watch with lerna](https://stackoverflow.com/a/55655749/2058360)
