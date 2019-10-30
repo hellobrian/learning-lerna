@@ -162,3 +162,4 @@ npm i react react-dom parcel-bundler -D
 
 - https://areknawo.com/full-blown-monorepo-setup-walkthrough/
 - [🔴 Setup a monorepo with Lerna 🐉](https://www.youtube.com/watch?v=pU87ufl2lDc) - [chantastic](https://www.youtube.com/channel/UCXpmUxvG37qpckRHdkstf5w)
+- [Running bili/rollup --watch with lerna](https://stackoverflow.com/a/55655749/2058360)
