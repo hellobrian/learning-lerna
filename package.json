@@ -27,7 +27,7 @@
             "npm run lint",
             "git add"
         ],
-        "**/*.{js,json,css,md}": [
+        "**/*.{js,json,scss,md}": [
             "prettier --write",
             "git add"
         ]
