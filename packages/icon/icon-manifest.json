@@ -1,0 +1,14 @@
+{
+    "icons": [
+        {
+            "file": "calendar.svg",
+            "name": "calendar",
+            "component": "Calendar"
+        },
+        {
+            "file": "chevron.svg",
+            "name": "chevron",
+            "component": "Chevron"
+        }
+    ]
+}

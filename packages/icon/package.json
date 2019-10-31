@@ -17,9 +17,11 @@
     },
     "scripts": {
         "test": "echo \"Error: run tests from root\" && exit 1",
-        "prebuild": "rm -rf build",
+        "prebuild": "rm -rf build && npm run icon:manifest",
         "build": "bili --config ../../bili.config.js",
-        "watch": "bili --watch --config ../../bili.config.js"
+        "prewatch": "npm run icon:manifest",
+        "watch": "bili --watch --config ../../bili.config.js",
+        "icon:manifest": "node ./icon-manifest.js"
     },
     "dependencies": {}
 }
