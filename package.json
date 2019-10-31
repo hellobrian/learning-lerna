@@ -34,7 +34,7 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "devDependencies": {
         "@babel/core": "^7.6.4",
         "@storybook/addon-actions": "^5.2.5",
