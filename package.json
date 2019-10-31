@@ -4,22 +4,24 @@
     "description": "tutorial for setting up lerna",
     "main": "index.js",
     "scripts": {
-        "test:watch": "jest --watchAll",
-        "test": "jest",
-        "build:storybook": "build-storybook -o public",
         "build:packages": "lerna run build",
-        "prebuild": "lerna bootstrap",
+        "build:storybook": "build-storybook -o public",
         "build": "npm run build:packages && npm run build:storybook",
+        "commit": "npx git-cz",
         "create": "hygen component new",
         "dev:storybook": "start-storybook -p 6006 --ci --quiet",
         "dev:watch": "lerna exec --parallel npm run watch",
         "dev": "npm-run-all --parallel dev:*",
-        "lint": "eslint . --cache --fix"
+        "lint": "eslint . --cache --fix",
+        "prebuild": "lerna bootstrap",
+        "test:watch": "jest --watchAll",
+        "test": "jest"
     },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
-            "pre-push": "npm test"
+            "pre-push": "npm test",
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
         }
     },
     "lint-staged": {
