@@ -1,4 +1,5 @@
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > TODO:
 >
@@ -163,3 +164,4 @@ npm i react react-dom parcel-bundler -D
 -   https://areknawo.com/full-blown-monorepo-setup-walkthrough/
 -   [🔴 Setup a monorepo with Lerna 🐉](https://www.youtube.com/watch?v=pU87ufl2lDc) - [chantastic](https://www.youtube.com/channel/UCXpmUxvG37qpckRHdkstf5w)
 -   [Running bili/rollup --watch with lerna](https://stackoverflow.com/a/55655749/2058360)
+-   [Release management in Angular with Lerna (commitizen)](https://blog.angularindepth.com/release-management-in-angular-with-lerna-21b4ab417c59)
