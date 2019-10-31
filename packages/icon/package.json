@@ -1,9 +1,9 @@
 {
-    "name": "close-icon",
+    "name": "icon",
     "version": "0.0.0",
-    "description": "close-icon",
+    "description": "icon",
     "keywords": [
-        "close-icon"
+        "icon"
     ],
     "license": "MIT",
     "main": "build/index.esm.js",

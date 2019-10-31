@@ -1,0 +1,9 @@
+<svg height="9" width="12" viewBox="0 0 12 9" fill="#000" class="" data-testid="ChevronIcon">
+  <title>Chevron</title>
+  <g transform="translate(-6 -8)">
+    <mask id="e5420890-3252-432d-ac33-669fac4b3c7c" fill="#fff">
+      <path d="M7.41 8.84L12 13.42l4.59-4.58L18 10.25l-6 6-6-6z"></path>
+    </mask>
+    <path fill="#000" d="M0 0h24v24H0z" mask="url(#e5420890-3252-432d-ac33-669fac4b3c7c)"></path>
+  </g>
+</svg>
