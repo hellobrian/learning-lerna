@@ -23,8 +23,11 @@ fs.readdir(svgFolder, (err, files) => {
         return { file, name, component };
     });
 
-    fs.writeFile('icon-manifest.json', `{ "icons": ${JSON.stringify(svgFiles)} }`, (err) => {
+    const iconManifestJson = `{ "icons": ${JSON.stringify(svgFiles)} }`;
+
+    fs.writeFile('icon-manifest.json', iconManifestJson, (err) => {
         if (err) throw err;
-        console.log('\n✅ icon-manifested written!\n');
+        console.log('\n✅ icon-manifest written!\n');
+        console.log(JSON.parse(iconManifestJson, null, 2));
     });
 });
