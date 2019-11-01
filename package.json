@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build:packages": "lerna run build",
+        "build:icon-manifest": "lerna run build:icon-manifest",
         "build:storybook": "build-storybook -o public",
         "build": "npm run build:packages && npm run build:storybook",
         "commit": "npx git-cz",

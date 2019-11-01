@@ -16,12 +16,11 @@
         "access": "public"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1",
-        "prebuild": "rm -rf build && npm run icon:manifest",
+        "build:icon-manifest": "node ./icon-manifest.js",
         "build": "bili --config ../../bili.config.js",
-        "prewatch": "npm run icon:manifest",
-        "watch": "bili --watch --config ../../bili.config.js",
-        "icon:manifest": "node ./icon-manifest.js"
+        "prebuild": "rm -rf build && npm run build:icon-manifest",
+        "prewatch": "npm run build:icon-manifest",
+        "watch": "bili --watch --config ../../bili.config.js"
     },
     "dependencies": {}
 }
