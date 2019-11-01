@@ -13,6 +13,7 @@ const options = iconManifest.icons.map((icon) => icon.name);
 
 export const Default = () => (
     <Icon
+        style={{ fill: text('fill', 'red') }}
         className={text('className', 'className')}
         name={select('name', options, options[0], 'name')}
     />
