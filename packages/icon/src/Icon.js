@@ -7,6 +7,7 @@ import Calendar from './svg/calendar.svg';
 import Chevron from './svg/chevron.svg';
 import Clock from './svg/clock.svg';
 import Close from './svg/close.svg';
+import Menu from './svg/menu.svg';
 import People from './svg/people.svg';
 
 // styles
@@ -23,6 +24,7 @@ export function Icon({ name = '', className = '', ...props }) {
             {formattedName === 'chevron' && <Chevron {...iconProps} />}
             {formattedName === 'clock' && <Clock {...iconProps} />}
             {formattedName === 'close' && <Close {...iconProps} />}
+            {formattedName === 'menu' && <Menu {...iconProps} />}
             {formattedName === 'people' && <People {...iconProps} />}
         </Fragment>
     );
