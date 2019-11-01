@@ -1,14 +1,7 @@
 {
     "icons": [
-        {
-            "file": "calendar.svg",
-            "name": "calendar",
-            "component": "Calendar"
-        },
-        {
-            "file": "chevron.svg",
-            "name": "chevron",
-            "component": "Chevron"
-        }
+        { "file": "calendar.svg", "name": "calendar", "component": "Calendar" },
+        { "file": "chevron.svg", "name": "chevron", "component": "Chevron" },
+        { "file": "clock.svg", "name": "clock", "component": "Clock" }
     ]
 }
