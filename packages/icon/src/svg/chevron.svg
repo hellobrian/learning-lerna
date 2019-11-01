@@ -1,4 +1,4 @@
-<svg width="12" height="9" data-testid="ChevronIcon">
+<svg data-testid="ChevronIcon" fill="#000" width="12" height="9">
   <title>Chevron</title>
   <path d="M1.41.84L6 5.42 10.59.84 12 2.25l-6 6-6-6" fill="#000" fill-rule="evenodd"/>
 </svg>
