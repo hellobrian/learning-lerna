@@ -1,0 +1,4 @@
+<svg data-testid="HouseIcon" fill="#000" width="12" height="13" viewBox="0 0 12 13">
+  <title>House</title>
+  <path fill-rule="evenodd" stroke="none" stroke-width="1" d="M12 5.172v5.965c0 .559-.453 1.011-1.01 1.011H8.13a.388.388 0 01-.387-.387V9.157a.388.388 0 00-.387-.387H4.64a.387.387 0 00-.387.387v2.604a.388.388 0 01-.388.387H1.01A1.01 1.01 0 010 11.138V5.171c0-.276.114-.542.314-.732L5.312.25c.4-.333.976-.333 1.376 0l4.999 4.19c.2.19.313.456.313.732" transform="translate(-62 -867) translate(62 867)"></path>
+</svg>
