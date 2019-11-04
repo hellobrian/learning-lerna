@@ -7,6 +7,7 @@ import Calendar from './svg/calendar.svg';
 import Chevron from './svg/chevron.svg';
 import Clock from './svg/clock.svg';
 import Close from './svg/close.svg';
+import Download from './svg/download.svg';
 import House from './svg/house.svg';
 import Menu from './svg/menu.svg';
 import People from './svg/people.svg';
@@ -26,6 +27,7 @@ export function Icon({ name = '', className = '', children, ...props }) {
             {formattedName === 'chevron' && <Chevron {...iconProps} />}
             {formattedName === 'clock' && <Clock {...iconProps} />}
             {formattedName === 'close' && <Close {...iconProps} />}
+            {formattedName === 'download' && <Download {...iconProps} />}
             {formattedName === 'house' && <House {...iconProps} />}
             {formattedName === 'menu' && <Menu {...iconProps} />}
             {formattedName === 'people' && <People {...iconProps} />}

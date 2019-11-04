@@ -4,6 +4,7 @@
         { "file": "chevron.svg", "name": "chevron", "component": "Chevron" },
         { "file": "clock.svg", "name": "clock", "component": "Clock" },
         { "file": "close.svg", "name": "close", "component": "Close" },
+        { "file": "download.svg", "name": "download", "component": "Download" },
         { "file": "house.svg", "name": "house", "component": "House" },
         { "file": "menu.svg", "name": "menu", "component": "Menu" },
         { "file": "people.svg", "name": "people", "component": "People" },
