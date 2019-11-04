@@ -1,0 +1,7 @@
+<svg data-testid="CalendarIcon" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000" fill-rule="nonzero" height="20" width="20" viewBox="0 0 21 20">
+  <title>Calendar</title>
+  <path d="M18.81 2h-1.62v2a1.51 1.51 0 1 1-3 0V2H6.66v2a1.52 1.52 0 1 1-3 0V2H2A1.61 1.61 0 0 0 .4 3.62v15.66h20V3.62A1.6 1.6 0 0 0 18.81 2zm-.27 15.4H2.28V8.24h16.26v9.16z"></path>
+  <path d="M16.37 1v3A.685.685 0 1 1 15 4V1a.68.68 0 0 1 1.36 0h.01zM5.83 1v3a.68.68 0 1 1-1.36 0V1a.68.68 0 1 1 1.36 0z"></path>
+</svg>

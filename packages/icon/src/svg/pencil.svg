@@ -1,0 +1,6 @@
+<svg data-testid="Pencil" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16" fill="#000">
+  <title>Pencil</title>
+  <path d="M.46 12.332L0 16l3.752-.376L13 6.292 9.708 3 .46 12.332zm15.291-8.89a.848.848 0 000-1.2L13.759.248a.848.848 0 00-1.2 0L11 1.807 14.193 5l1.558-1.558z" fill="#000" fill-rule="nonzero"/>
+</svg>

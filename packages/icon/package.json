@@ -1,26 +1,26 @@
 {
-    "name": "button",
+    "name": "icon",
     "version": "0.0.0",
-    "description": "button",
+    "description": "icon",
     "keywords": [
-        "button"
+        "icon"
     ],
     "license": "MIT",
     "main": "build/index.esm.js",
     "source": "src/index.js",
     "files": [
-        "build"
+        "build",
+        "src"
     ],
     "publishConfig": {
         "access": "public"
     },
     "scripts": {
-        "test": "echo \"Error: run tests from root\" && exit 1",
-        "prebuild": "rm -rf build",
+        "build:icon-manifest": "node ./icon-manifest.js",
         "build": "bili --config ../../bili.config.js",
+        "prebuild": "rm -rf build && npm run build:icon-manifest",
+        "prewatch": "npm run build:icon-manifest",
         "watch": "bili --watch --config ../../bili.config.js"
     },
-    "dependencies": {
-        "icon": "^0.0.0"
-    }
+    "dependencies": {}
 }

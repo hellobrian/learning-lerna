@@ -1,6 +1,7 @@
-node_modules
-.vscode
-lerna-debug.log
-build
-public
+.DS_Store
 .eslintcache
+.vscode
+build
+lerna-debug.log
+node_modules
+public

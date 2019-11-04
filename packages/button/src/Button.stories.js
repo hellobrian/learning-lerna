@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Button from '../build/index.esm';
-import CloseIcon from 'close-icon';
+import Icon from 'icon';
 
 export default {
     title: 'Button'
@@ -9,7 +9,7 @@ export default {
 
 export const Default = () => (
     <Button onClick={action('onClick')}>
-        <CloseIcon />
+        <Icon name="chevron" />
         wut up
     </Button>
 );
