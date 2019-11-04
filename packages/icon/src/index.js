@@ -5,7 +5,8 @@ import { Icon } from './Icon';
 import iconManifest from '../icon-manifest.json';
 
 Icon.propTypes = {
-    name: PropTypes.oneOf(iconManifest.icons).isRequired,
+    src: PropTypes.arrayOf(PropTypes.string), // accepts an .svg file
+    name: PropTypes.oneOf(iconManifest.icons),
     className: PropTypes.string
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../build/index.esm';
-import { select, text } from '@storybook/addon-knobs';
+import { select, text, files } from '@storybook/addon-knobs';
 import iconManifest from '../icon-manifest.json';
 
 export default {
@@ -14,3 +14,18 @@ export const Default = () => (
         name={select('name', iconManifest.icons, iconManifest.icons[0], 'name')}
     />
 );
+
+export const CustomIcon = () => {
+    const label = 'svgFiles';
+    const accept = '.svg';
+    const defaultValue = [];
+    const groupId = label;
+
+    return (
+        <Icon
+            style={{ width: text('width', '80px'), height: text('height', '80px') }}
+            className={text('className', 'className')}
+            src={files(label, accept, defaultValue, groupId)}
+        />
+    );
+};
