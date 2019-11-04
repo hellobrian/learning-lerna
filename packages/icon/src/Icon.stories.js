@@ -1,33 +1,36 @@
 import React from 'react';
-import Icon from '../build/index.esm';
 import { select, text, files } from '@storybook/addon-knobs';
+import Icon from '../build/index.esm';
+import IconSrcExample from './svg/calendar.svg';
 import iconManifest from '../icon-manifest.json';
 
 export default {
-    title: 'Icon'
+    title: 'Icon',
+    component: Icon
 };
 
-console.log(iconManifest.icons);
-
-export const Default = () => (
+export const WithName = () => (
     <Icon
-        style={{ fill: text('fill', 'blue') }}
+        style={{ fill: text('fill', 'currentColor') }}
         className={text('className', 'className')}
         name={select('name', iconManifest.icons, iconManifest.icons[0], 'name')}
     />
 );
 
-export const CustomIcon = () => {
+export const WithSrc = () => {
     const label = 'svgFiles';
     const accept = '.svg';
-    const defaultValue = [];
     const groupId = label;
 
     return (
         <Icon
-            style={{ width: text('width', '80px'), height: text('height', '80px') }}
             className={text('className', 'className')}
-            src={files(label, accept, defaultValue, groupId)}
+            style={{ width: text('width', '80px'), height: text('height', '80px') }}
+            /**
+             * import your SVG file and use it in src prop
+             * src={IconSrcExample}
+             */
+            src={files(label, accept, IconSrcExample, groupId)}
         />
     );
 };
