@@ -1,0 +1,5 @@
+<svg data-testid="SignoutIcon" fill="#000" fill-rule="evenodd" height="13" width="16" viewBox="0 0 16 13">
+  <title>Signout</title>
+  <path d="M16 0v12.465H6.378V9.488h1.946v1.031h5.73V1.946h-5.73v1.033H6.378V0z"></path>
+  <path d="M4.616 3.47l.456.457-.456.456-.878.878H12.117v1.946H3.738l.878.875.456.456-.456.457-.92.92L.012 6.235 3.695 2.55z"></path>
+</svg>
