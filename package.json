@@ -1,13 +1,13 @@
 {
     "name": "learning-lerna",
     "version": "1.0.0",
-    "description": "tutorial for setting up lerna",
-    "main": "index.js",
+    "description": "example for setting up lerna",
     "scripts": {
-        "build:packages": "lerna run build",
+        "bootstrap": "lerna bootstrap",
         "build:icon-manifest": "lerna run build:icon-manifest",
+        "build:packages": "lerna run build",
         "build:storybook": "build-storybook -o public",
-        "build": "npm run build:packages && npm run build:storybook",
+        "build": "npm-run-all --parallel build:*",
         "commit": "npx git-cz",
         "create": "hygen component new",
         "dev:storybook": "start-storybook -p 6006 --ci --quiet",
@@ -34,6 +34,11 @@
             "prettier --write",
             "git add"
         ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
     },
     "keywords": [],
     "author": "",
@@ -70,10 +75,5 @@
         "react-dom": "^16.11.0",
         "rollup-plugin-react-svg": "^3.0.3"
     },
-    "dependencies": {},
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    }
+    "dependencies": {}
 }
