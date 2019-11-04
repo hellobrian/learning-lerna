@@ -19,7 +19,7 @@ import SignOut from './svg/sign-out.svg';
 // styles
 import styles from './Icon.module.scss';
 
-export function Icon({ name = '', src = '', className = '', ...props }) {
+export function Icon({ name = '', src, className = '', ...props }) {
     const classList = classNames({
         [className]: true,
         [styles.root]: true,
