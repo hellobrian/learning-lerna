@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import { Icon } from './Icon';
 import iconManifest from '../icon-manifest.json';
 
-const allowedNames = iconManifest.icons.map((icon) => icon.name);
-
 Icon.propTypes = {
-    name: PropTypes.oneOf(allowedNames).isRequired,
+    name: PropTypes.oneOf(iconManifest.icons).isRequired,
     className: PropTypes.string
 };
 

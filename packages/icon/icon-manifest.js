@@ -19,8 +19,7 @@ fs.readdir(svgFolder, (err, files) => {
     if (err) throw err;
     const svgFiles = files.map((file) => {
         const name = file.split('.')[0];
-        const component = capitalize(name);
-        return { file, name, component };
+        return name;
     });
 
     const iconManifestJson = `{ "icons": ${JSON.stringify(svgFiles)} }`;
