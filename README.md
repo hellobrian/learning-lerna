@@ -4,17 +4,13 @@
 
 > TODO:
 >
-> -   setup cypress
 > -   IE11 browser compat
 > -   css variables
 > -   async/await? (bili might already handle this)
-> -   import json
-> -   import svg
 > -   how to publish packages?
 > -   semantic releases
-> -   conventional commits and changelogs
+> -   changelogs via convntional commits?
 > -   css reset
-> -   bili.js vs microbundle
 > -   Object.assign used in builds. Do I need to Polyfill? Or will app bundler? IE11 support?
 
 # Learning Lerna
