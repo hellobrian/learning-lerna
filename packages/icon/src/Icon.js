@@ -1,6 +1,7 @@
 'use strict';
 // packages
 import React, { Fragment } from 'react';
+import classNames from 'classnames';
 
 // components
 import Calendar from './svg/calendar.svg';
@@ -19,12 +20,18 @@ import SignOut from './svg/sign-out.svg';
 import styles from './Icon.module.scss';
 
 export function Icon({ name = '', src = '', className = '', ...props }) {
-    const classList = [styles.root, className].join(' ').trim();
+    const classList = classNames({
+        [className]: true,
+        [styles.root]: true,
+        [styles.svg]: !src
+    }).trim();
+
     const iconProps = { className: classList, ...props };
+
     const formattedName = name.toLowerCase().trim();
 
     return src ? (
-        <img src={src} {...props} />
+        <img src={src} className={classList} {...props} />
     ) : (
         <Fragment>
             {formattedName === 'calendar' && <Calendar {...iconProps} />}

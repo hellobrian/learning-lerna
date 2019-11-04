@@ -7,6 +7,8 @@ export default {
     title: 'Icon'
 };
 
+console.log(iconManifest.icons);
+
 export const Default = () => (
     <Icon
         style={{ fill: text('fill', 'blue') }}

@@ -3,24 +3,13 @@ const path = require('path');
 
 const svgFolder = path.join(__dirname, './src/svg');
 
-function capitalize(str) {
-    return str
-        .split('')
-        .map((char, index) => {
-            if (index === 0) {
-                return char.toUpperCase();
-            }
-            return char;
-        })
-        .join('');
-}
-
 fs.readdir(svgFolder, (err, files) => {
     if (err) throw err;
-    const svgFiles = files.map((file) => {
-        const name = file.split('.')[0];
-        return name;
-    });
+    const svgFiles = files
+        .map((file) => {
+            return file.split('.')[0];
+        })
+        .filter((name) => name !== '');
 
     const iconManifestJson = `{ "icons": ${JSON.stringify(svgFiles)} }`;
 
